@@ -48,4 +48,5 @@ bool SimulationEngine::checkEndCondition() const {
 
 bool SimulationEngine::isFinished() const {
     return finished;
+
 }

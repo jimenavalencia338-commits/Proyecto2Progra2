@@ -74,4 +74,5 @@ void AdventureEngine::generateFinalReport() {
     if (world == nullptr) {
         throw SimulationException("No se puede generar el reporte sin mundo");
     }
+
 }

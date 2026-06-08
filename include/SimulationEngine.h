@@ -20,6 +20,7 @@ public:
     void processTurn();
     bool checkEndCondition() const;
     bool isFinished() const;
+
 };
 
 #endif

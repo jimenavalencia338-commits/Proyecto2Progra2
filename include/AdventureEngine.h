@@ -27,6 +27,7 @@ public:
     void loadGameData();
     void runSimulation();
     void generateFinalReport();
+
 };
 
 #endif
