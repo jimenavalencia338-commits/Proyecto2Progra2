@@ -21,3 +21,4 @@ public:
 
     bool isActivated() const;
 };
+
