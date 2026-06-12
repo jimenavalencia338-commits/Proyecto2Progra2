@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_INVALID_DATA_EXCEPTION_H
-#define PROYECTO2_INVALID_DATA_EXCEPTION_H
+#pragma once
 
 #include "exceptions/GameException.h"
 
@@ -8,4 +7,3 @@ public:
     explicit InvalidDataException(const std::string& message);
 };
 
-#endif

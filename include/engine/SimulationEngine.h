@@ -1,5 +1,11 @@
-#ifndef PROYECTO2_SIMULATION_ENGINE_H
-#define PROYECTO2_SIMULATION_ENGINE_H
+#pragma once
+
+
+#include "items/Inventory.h"
+#include "events/TrapEvent.h"
+#include "events/RewardEvent.h"
+#include "objectives/Objective.h"
+
 
 class World;
 class Logger;
@@ -10,6 +16,11 @@ private:
     Logger* logger;
     bool finished;
 
+    Inventory inventory;
+    Objective objective;
+    TrapEvent trapEvent;
+    RewardEvent rewardEvent;
+
 public:
     SimulationEngine();
 
@@ -18,9 +29,7 @@ public:
 
     void start();
     void processTurn();
-    bool checkEndCondition() const;
+    bool checkEndCondition();
     bool isFinished() const;
 
 };
-
-#endif

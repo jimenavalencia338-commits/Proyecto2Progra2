@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_FILE_EXCEPTION_H
-#define PROYECTO2_FILE_EXCEPTION_H
+#pragma once
 
 #include "exceptions/GameException.h"
 
@@ -8,4 +7,3 @@ public:
     explicit FileException(const std::string& message);
 };
 
-#endif

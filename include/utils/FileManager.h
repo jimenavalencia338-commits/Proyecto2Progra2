@@ -1,20 +1,23 @@
 #pragma once
 
+#include "world/World.h"
+
+#include <filesystem>
 #include <string>
-
-using namespace std;
-
-class World;
 
 class FileManager {
 public:
     FileManager();
 
-    bool validateFile(const string& path);
+    bool validateFile(const std::string& path) const;
 
-    void loadWorld(const string& path);
-    void loadRooms(const string& path);
-    void loadItems(const string& path);
-    void loadEnemies(const string& path);
+    void createBaseFiles(const std::filesystem::path& dataPath) const;
+
+    void loadWorld(World& world, const std::filesystem::path& dataPath) const;
+
+private:
+    void loadRooms(World& world, const std::filesystem::path& dataPath) const;
+    void loadConnections(World& world, const std::filesystem::path& dataPath) const;
+    void loadItems(World& world, const std::filesystem::path& dataPath) const;
+    void loadEnemies(World& world, const std::filesystem::path& dataPath) const;
 };
-

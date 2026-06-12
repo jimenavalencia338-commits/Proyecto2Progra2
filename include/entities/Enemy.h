@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_ENEMY_H
-#define PROYECTO2_ENEMY_H
+#pragma once
 
 #include "entities/Character.h"
 
@@ -26,5 +25,3 @@ public:
     void specialAttack(Player& player) const;
 
 };
-
-#endif

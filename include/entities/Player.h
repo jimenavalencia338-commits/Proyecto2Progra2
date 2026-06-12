@@ -1,6 +1,4 @@
-#ifndef PROYECTO2_PLAYER_H
-#define PROYECTO2_PLAYER_H
-
+#pragma once
 
 #include "entities/Character.h"
 
@@ -24,4 +22,3 @@ public:
 
 };
 
-#endif

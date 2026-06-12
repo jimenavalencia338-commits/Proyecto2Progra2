@@ -1,6 +1,4 @@
-#ifndef PROYECTO2_CHARACTER_H
-#define PROYECTO2_CHARACTER_H
-
+#pragma once
 
 #include <string>
 
@@ -28,5 +26,3 @@ public:
     virtual void attack(Character& target) const;
 
 };
-
-#endif

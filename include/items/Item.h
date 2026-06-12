@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_ITEM_H
-#define PROYECTO2_ITEM_H
+#pragma once
 
 #include <string>
 
@@ -20,4 +19,3 @@ public:
     virtual void use(Player& player) = 0;
 };
 
-#endif

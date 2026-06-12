@@ -1,4 +1,6 @@
-#include "../../include/events/TrapEvent.h"
+#include "events/TrapEvent.h"
+#include "entities/Player.h"
+#include "utils/Logger.h"
 
 TrapEvent::TrapEvent(
     const string& description,
@@ -8,9 +10,14 @@ TrapEvent::TrapEvent(
 }
 
 void TrapEvent::trigger(Player& player, Logger& logger) {
-    activated = true;
+    if (activated) {
+        return;
+    }
 
-    // Se implementará cuando Player y Logger estén listos
+    player.receiveDamage(damage);
+    logger.writeLog(description);
+
+    activated = true;
 }
 
 int TrapEvent::getDamage() const {

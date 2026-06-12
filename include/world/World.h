@@ -1,34 +1,29 @@
-//
-// Created by jimen on 7/6/2026.
-//
 #pragma once
 
-#include <vector>
+#include "world/Room.h"
+#include "entities/Player.h"
+#include "events/GameEvent.h"
+
 #include <memory>
-
-using namespace std;
-
-class Room;
-class Player;
-class GameEvent;
+#include <vector>
 
 class World {
 private:
-    vector<unique_ptr<Room>> rooms;
-    unique_ptr<Player> player;
-    vector<unique_ptr<GameEvent>> events;
+    std::vector<std::unique_ptr<Room>> rooms;
+    std::unique_ptr<Player> player;
+    std::vector<std::unique_ptr<GameEvent>> events;
 
 public:
     World();
 
-    void addRoom(unique_ptr<Room> room);
+    void addRoom(std::unique_ptr<Room> room);
 
     Room* getRoomById(int id);
 
-    void setPlayer(unique_ptr<Player> player);
+    void setPlayer(std::unique_ptr<Player> player);
 
     Player* getPlayer();
 
-    vector<unique_ptr<GameEvent>>& getEvents();
-    vector<unique_ptr<Room>>& getRooms();
+    std::vector<std::unique_ptr<GameEvent>>& getEvents();
+    std::vector<std::unique_ptr<Room>>& getRooms();
 };

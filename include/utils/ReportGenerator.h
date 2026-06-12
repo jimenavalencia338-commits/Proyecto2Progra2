@@ -1,11 +1,13 @@
 #pragma once
 
+#include "world/World.h"
+#include "utils/Logger.h"
+
 #include <string>
 
 using namespace std;
 
-class World;
-class Logger;
+
 
 class ReportGenerator {
 public:

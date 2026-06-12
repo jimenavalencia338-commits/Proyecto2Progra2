@@ -1,4 +1,6 @@
-#include "../../include/events/RewardEvent.h"
+#include "events/RewardEvent.h"
+#include "entities/Player.h"
+#include "utils/Logger.h"
 
 RewardEvent::RewardEvent(
         const std::string& description,
@@ -8,9 +10,14 @@ RewardEvent::RewardEvent(
 }
 
 void RewardEvent::trigger(Player& player, Logger& logger) {
-    activated = true;
+    if (activated) {
+        return;
+    }
 
-    // Se implementará cuando Player y Logger estén listos
+    player.addScore(rewardPoints);
+    logger.writeLog(description);
+
+    activated = true;
 }
 
 int RewardEvent::getRewardPoints() const {

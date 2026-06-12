@@ -1,4 +1,6 @@
-#include "../../include/objectives/Objective.h"
+#include "objectives/Objective.h"
+#include "entities/Player.h"
+
 
 Objective::Objective(const string& description)
         : description(description),
@@ -6,7 +8,9 @@ Objective::Objective(const string& description)
 }
 
 bool Objective::check(Player& player) {
-    // Se implementará cuando conozcamos Player
+    if (player.isAlive() && player.getScore() >= 300) {
+        complete();
+    }
     return completed;
 }
 
