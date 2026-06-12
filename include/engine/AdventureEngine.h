@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_ADVENTURE_ENGINE_H
-#define PROYECTO2_ADVENTURE_ENGINE_H
+#pragma once
 
 #include "engine/SimulationEngine.h"
 
@@ -30,4 +29,3 @@ public:
 
 };
 
-#endif
