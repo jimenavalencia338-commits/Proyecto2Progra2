@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_SIMULATION_EXCEPTION_H
-#define PROYECTO2_SIMULATION_EXCEPTION_H
+#pragma once
 
 #include "exceptions/GameException.h"
 
@@ -8,4 +7,3 @@ public:
     explicit SimulationException(const std::string& message);
 };
 
-#endif

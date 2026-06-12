@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_KEY_H
-#define PROYECTO2_KEY_H
+#pragma once
 
 #include "items/Item.h"
 
@@ -17,4 +16,3 @@ public:
     void use(Player& player) override;
 };
 
-#endif

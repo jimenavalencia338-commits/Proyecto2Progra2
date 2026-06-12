@@ -1,5 +1,4 @@
-#ifndef PROYECTO2_TREASURE_H
-#define PROYECTO2_TREASURE_H
+#pragma once
 
 #include "items/Item.h"
 
@@ -16,5 +15,3 @@ public:
 
     void use(Player& player) override;
 };
-
-#endif
