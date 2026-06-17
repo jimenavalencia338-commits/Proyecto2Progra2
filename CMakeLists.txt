@@ -6,17 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Proyecto2
         main.cpp
-
         src/entities/Character.cpp
         src/entities/Player.cpp
         src/entities/Enemy.cpp
-
         src/items/Item.cpp
         src/items/Potion.cpp
         src/items/Key.cpp
         src/items/Treasure.cpp
         src/items/Inventory.cpp
-
         src/world/Room.cpp
         src/world/World.cpp
 
